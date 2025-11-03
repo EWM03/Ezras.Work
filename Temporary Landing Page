@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ezra's Work</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      text-align: center;
+      padding-top: 100px;
+    }
+    h1 {
+      font-size: 3em;
+      margin-bottom: 0.5em;
+    }
+    p {
+      font-size: 1.2em;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <h1>Hello, World 👋</h1>
+  <p>Welcome to ezras.work — a space for forensic clarity, credential safety, and technical growth.</p>
+</body>
+</html>
