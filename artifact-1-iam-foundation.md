@@ -1,4 +1,5 @@
-# This lab simulates a small organization transitioning from baseline identity protections to enterprise-grade governance. It demonstrates user provisioning, role-based access control, MFA enforcement, Conditional Access policy creation, and Privileged Identity Management workflows. Logs and screenshots validate each step, showing realistic authentication behavior across multiple personas and geographic locations.
+# Identity Governance Foundation (Artifact 1)
+## This lab simulates a small organization transitioning from baseline identity protections to enterprise-grade governance. It demonstrates user provisioning, role-based access control, MFA enforcement, Conditional Access policy creation, and Privileged Identity Management workflows. Logs and screenshots validate each step, showing realistic authentication behavior across multiple personas and geographic locations.
 ## The project reflects hands-on experience with Microsoft Entra ID, including:
 ## - 	Security Defaults and Conditional Access
 ## - 	Role assignment via groups
@@ -158,3 +159,8 @@ Audit logs were filtered by category to highlight key IAM events. Separate views
 ### PIM Activation Audit Logs
 
 ![PIM Activation Audit Logs](assets/artifact1/pim-activation-audit-logs.png)
+
+
+<ul>
+  <li><a href="https://www.ezras.work">Return to Main Page</a></li>
+</ul>
