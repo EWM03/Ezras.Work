@@ -11,18 +11,22 @@ A small but growing organization lacks a structured identity and access manageme
 Implementation
 Security Defaults were enabled to enforce MFA, block legacy authentication, and provide a baseline identity protection posture during the free tier phase. Example groups and users were created to simulate structure and assigned roles.
 
-User	Group
-Alice	IT-Support
-Bob	HR-Staff
-Charlie	Corp-Employees
-Ezra	Corp-Admins
+| User    | Group          |
+|---------|----------------|
+| Alice   | IT-Support     |
+| Bob     | HR-Staff       |
+| Charlie | Corp-Employees |
+| Ezra    | Corp-Admins    |
 
 
-## Group	Roles to Assign	Why
-Corp-Admins	Global Reader, Security Reader	Read-only admin visibility
-IT-Support	User Administrator	Identity operations (Tier 1)
-HR-Staff	None	HR shouldn’t have directory privileges
-Corp-Employees	None	Standard users
+
+| Group          | Roles to Assign                | Why                                    |
+|----------------|------------------------------  |----------------------------------      |
+| Corp-Admins    | Global Reader, Security Reader | Read-only admin visibility             |
+| IT-Support     | User Administrator             | Identity operations (Tier 1)           |
+| HR-Staff       | None                           | HR shouldn’t have directory privileges |
+| Corp-Employees | None                           | Standard users                         |
+
 
 Each user account was used to generate logs. Authentication behavior was validated. For example: Security Defaults enforces MFA at registration but does not require MFA for every sign in. After initial registration, Entra issues a Primary Refresh Token that reduces MFA frequency unless risk conditions change. Audit logs confirm user and group provisioning, as well as MFA registration for all personas. Sign-in logs show successful and failed authentication attempts across multiple personas and geographic locations. Conditional Access policies were evaluated, MFA was enforced, and location telemetry was captured. Interrupts and failures reflect realistic user behavior and policy enforcement. A location change (US → UK) was used to generate MFA prompts and demonstrate Conditional Access evaluation in the sign-in logs.
 Security Defaults were disabled to allow granular Conditional Access policies and Privileged Identity Management workflows. This shift reflects a transition from baseline protections to enterprise-grade identity governance.
@@ -32,75 +36,125 @@ Audit logs were filtered by category to highlight key IAM events. Separate views
 	
 
 # The following screenshots support each implementation step and confirm policy enforcement, role activation, and audit traceability.
+
 ## Phase 1 — Setup
-Security Defaults ON
- ![Security Defaults ON](EWM03/Ezras.Work/security-defaults-on.png)
 
-Security Defaults OFF
-  ![Security Defaults OFF](EWM03/Ezras.Work/security-defaults-off.png)
+### Security Defaults ON
 
-All Users in E5
- ![All Users in E5](EWM03/Ezras.Work/all-users-in-e5.png)
+![Security Defaults ON](assets/artifact1/security-defaults-on.png)
 
-Security Groups in E5
- ![Security Groups in E5](EWM03/Ezras.Work/security-groups-in-e5.png)
 
-Group Membership in E5
-  ![Group Membership in E5](EWM03/Ezras.Work/group-membership-in-e5.png)
+### Security Defaults OFF
 
-Assigned Roles: Admins
- ![Assigned Roles: Admins](EWM03/Ezras.Work/assigned-roles-admins.png)
+![Security Defaults OFF](assets/artifact1/security-defaults-off.png)
 
-Assigned Roles: Ezra
- ![Assigned Roles: Ezra](EWM03/Ezras.Work/assigned-roles-ezra.png)
 
-Assigned Roles: IT Support
- ![Assigned Roles: IT Support](EWM03/Ezras.Work/assigned-roles-it-support.png)
+### All Users in E5
 
-Creating New Group and Roles in E5
- ![Creating New Group and Roles in E5](EWM03/Ezras.Work/creating-new-group-and-roles-in-e5.png)
+![All Users in E5](assets/artifact1/all-users-in-e5.png)
+
+
+### Security Groups in E5
+
+![Security Groups in E5](assets/artifact1/security-groups-in-e5.png)
+
+
+### Group Membership in E5
+
+![Group Membership in E5](assets/artifact1/group-membership-in-e5.png)
+
+
+### Assigned Roles: Admins
+
+![Assigned Roles: Admins](assets/artifact1/assigned-roles-admins.png)
+
+
+### Assigned Roles: Ezra
+
+![Assigned Roles: Ezra](assets/artifact1/assigned-roles-ezra.png)
+
+
+### Assigned Roles: IT Support
+
+![Assigned Roles: IT Support](assets/artifact1/assigned-roles-it-support.png)
+
+
+### Creating New Group and Roles in E5
+
+![Creating New Group and Roles in E5](assets/artifact1/creating-new-group-and-roles-in-e5.png)
+
 
 ## Phase 2 — Conditional Access
-Creating Conditional Access Policies
- ![Creating Conditional Access Policies](EWM03/Ezras.Work/creating-conditional-access-policies.png)
 
-Conditional Access Policy Confirmation
- ![Conditional Access Policy Confirmation](EWM03/Ezras.Work/conditional-access-policy-confirmation.png)
+### Creating Conditional Access Policies
 
-Conditional Access Policy Audit Logs
- ![Conditional Access Policy Audit Logs](EWM03/Ezras.Work/conditional-access-policy-audit-logs.png)
+![Creating Conditional Access Policies](assets/artifact1/creating-conditional-access-policies.png)
+
+
+### Conditional Access Policy Confirmation
+
+![Conditional Access Policy Confirmation](assets/artifact1/conditional-access-policy-confirmation.png)
+
+
+### Conditional Access Policy Audit Logs
+
+![Conditional Access Policy Audit Logs](assets/artifact1/conditional-access-policy-audit-logs.png)
+
 
 ## Phase 2 — PIM
-Group PIM Assignment
- ![Group PIM Assignment](EWM03/Ezras.Work/group-pim-assignment.png)
 
-Group PIM Confirmation
- ![Group PIM Confirmation](EWM03/Ezras.Work/group-pim-confimation.png)
+### Group PIM Assignment
 
-Admin.Ezra Eligible Role
- ![Admin.Ezra Eligible Role](EWM03/Ezras.Work/admin.ezra-eligible-role.png)
+![Group PIM Assignment](assets/artifact1/group-pim-assignment.png)
 
-Admin.Ezra Eligible Activation
- ![Admin.Ezra Eligible Activation](EWM03/Ezras.Work/admin.ezra-eligible-activation.png)
 
-Admin.Ezra Elevated
- ![Admin.Ezra Elevated](EWM03/Ezras.Work/admin.ezra-elevated.png)
+### Group PIM Confirmation
+
+![Group PIM Confirmation](assets/artifact1/group-pim-confirmation.png)
+
+
+### Admin.Ezra Eligible Role
+
+![Admin.Ezra Eligible Role](assets/artifact1/admin.ezra-eligible-role.png)
+
+
+### Admin.Ezra Eligible Activation
+
+![Admin.Ezra Eligible Activation](assets/artifact1/admin.ezra-eligible-activation.png)
+
+
+### Admin.Ezra Elevated
+
+![Admin.Ezra Elevated](assets/artifact1/admin.ezra-elevated.png)
+
 
 ## Phase 2 — Logs and Validation
-User Sign-in Logs
- ![User Sign-in Logs](EWM03/Ezras.Work/user-sign-in-logs.png)
 
-Sign-in Events US and UK
- ![Sign-in Events US and UK](EWM03/Ezras.Work/sign-in-events-us-and-uk.png)
+### User Sign-in Logs
 
-Elevation Audit Log
- ![Elevation Audit Log](EWM03/Ezras.Work/elevation-audit-log.png)
+![User Sign-in Logs](assets/artifact1/user-sign-in-logs.png)
 
-UserManagement Audit Logs
- ![UserManagement Audit Logs](EWM03/Ezras.Work/usermanagement-audit-logs.png)
 
-GroupManagement Audit Logs
- ![GroupManagement Audit Logs](EWM03/Ezras.Work/groupmanagement-audit-logs.png)
+### Sign-in Events US and UK
 
-PIM Activation Audit Logs
- ![PIM Activation Audit Logs](EWM03/Ezras.Work/pim-activation-audit-logs.png)
+![Sign-in Events US and UK](assets/artifact1/sign-in-events-us-and-uk.png)
+
+
+### Elevation Audit Log
+
+![Elevation Audit Log](assets/artifact1/elevation-audit-log.png)
+
+
+### UserManagement Audit Logs
+
+![UserManagement Audit Logs](assets/artifact1/usermanagement-audit-logs.png)
+
+
+### GroupManagement Audit Logs
+
+![GroupManagement Audit Logs](assets/artifact1/groupmanagement-audit-logs.png)
+
+
+### PIM Activation Audit Logs
+
+![PIM Activation Audit Logs](assets/artifact1/pim-activation-audit-logs.png)
