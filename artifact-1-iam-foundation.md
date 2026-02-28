@@ -1,5 +1,5 @@
 # Identity Governance Foundation (Artifact 1)
-## This lab simulates a small organization transitioning from baseline identity protections to enterprise-grade governance. It demonstrates user provisioning, role-based access control, MFA enforcement, Conditional Access policy creation, and Privileged Identity Management workflows. Logs and screenshots validate each step, showing realistic authentication behavior across multiple personas and geographic locations.
+## &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This lab simulates a small organization transitioning from baseline identity protections to enterprise-grade governance. It demonstrates user provisioning, role-based access control, MFA enforcement, Conditional Access policy creation, and Privileged Identity Management workflows. Logs and screenshots validate each step, showing realistic authentication behavior across multiple personas and geographic locations.
 ## The project reflects hands-on experience with Microsoft Entra ID, including:
 ## - 	Security Defaults and Conditional Access
 ## - 	Role assignment via groups
@@ -8,7 +8,7 @@
 ## - 	Sign-in telemetry and policy enforcement
 
 ## Problem Statement
-A small but growing organization lacks a structured identity and access management process. User accounts are created inconsistently, permissions accumulate over time, and there is no centralized visibility into authentication risks or access levels. This project designs and documents a lightweight IAM foundation that improves security, reduces operational friction, and prepares the organization for future scaling.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A small but growing organization lacks a structured identity and access management process. User accounts are created inconsistently, permissions accumulate over time, and there is no centralized visibility into authentication risks or access levels. This project designs and documents a lightweight IAM foundation that improves security, reduces operational friction, and prepares the organization for future scaling.
 Implementation
 Security Defaults were enabled to enforce MFA, block legacy authentication, and provide a baseline identity protection posture during the free tier phase. Example groups and users were created to simulate structure and assigned roles.
 
@@ -29,7 +29,7 @@ Security Defaults were enabled to enforce MFA, block legacy authentication, and 
 | Corp-Employees | None                           | Standard users                         |
 
 
-Each user account was used to generate logs. Authentication behavior was validated. For example: Security Defaults enforces MFA at registration but does not require MFA for every sign in. After initial registration, Entra issues a Primary Refresh Token that reduces MFA frequency unless risk conditions change. Audit logs confirm user and group provisioning, as well as MFA registration for all personas. Sign-in logs show successful and failed authentication attempts across multiple personas and geographic locations. Conditional Access policies were evaluated, MFA was enforced, and location telemetry was captured. Interrupts and failures reflect realistic user behavior and policy enforcement. A location change (US → UK) was used to generate MFA prompts and demonstrate Conditional Access evaluation in the sign-in logs.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Each user account was used to generate logs. Authentication behavior was validated. For example: Security Defaults enforces MFA at registration but does not require MFA for every sign in. After initial registration, Entra issues a Primary Refresh Token that reduces MFA frequency unless risk conditions change. Audit logs confirm user and group provisioning, as well as MFA registration for all personas. Sign-in logs show successful and failed authentication attempts across multiple personas and geographic locations. Conditional Access policies were evaluated, MFA was enforced, and location telemetry was captured. Interrupts and failures reflect realistic user behavior and policy enforcement. A location change (US → UK) was used to generate MFA prompts and demonstrate Conditional Access evaluation in the sign-in logs.
 Security Defaults were disabled to allow granular Conditional Access policies and Privileged Identity Management workflows. This shift reflects a transition from baseline protections to enterprise-grade identity governance.
 Conditional Access policies were created using Microsoft’s built-in templates and manually configured to enforce MFA and block legacy authentication. The Manage Policies view confirms active enforcement.
 Privileged Identity Management was used to assign the Security Administrator role to the Corp-Admins group. Admin.Ezra activated the role through PIM’s just-in-time workflow, providing justification and time-bound elevation. This demonstrates least privilege and controlled access to sensitive administrative capabilities.
