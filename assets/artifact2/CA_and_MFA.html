@@ -1,19 +1,19 @@
 
 
-#Artifact 2: Implementing Conditional Access and MFA in Microsoft Entra
+# Artifact 2: Implementing Conditional Access and MFA in Microsoft Entra
 
-##Introduction
+## Introduction
 For Artifact 2, I worked inside my Microsoft Entra ID E5 tenant to move from the broad, all‑or‑nothing protections of Security Defaults to a more flexible, policy‑driven access model using Conditional Access. The goal was to enforce MFA through policy, apply location‑based access controls, and design a break‑glass emergency access account. The screenshots included throughout this artifact document each configuration and validation step.
 
 
-##Confirming Tenant and Administrator Context
+## Confirming Tenant and Administrator Context
 I began by confirming that I was working in the correct tenant and that my administrative account had the necessary privileges.  
 Screenshot reference: The tenant overview shows Ezras Work with my Global Administrator role active, validated through Privileged Identity Management.
 
 This establishes the administrative context for all subsequent policy work.
 
 
-##Disabling Security Defaults
+## Disabling Security Defaults
 Security Defaults were previously disabled in Artifact 1. This is required because Security Defaults enforce MFA and other protections in an all‑or‑nothing manner, preventing granular Conditional Access policies from taking effect.
 
 Screenshot reference: The Security Defaults page shows the setting as Disabled, with the reason “My organization is planning to use Conditional Access.”
@@ -21,7 +21,7 @@ Screenshot reference: The Security Defaults page shows the setting as Disabled, 
 This confirms that the tenant is ready for policy‑based MFA enforcement.
 
 
-##CA01 – Require MFA for All Users
+## CA01 – Require MFA for All Users
 The first Conditional Access policy enforces MFA for all users in the tenant.
 
 Configuration
@@ -42,7 +42,7 @@ Screenshot reference: The MFA prompt shows the Authenticator number‑matching c
 This confirms that CA01 successfully enforced MFA.
 
 
-##CA02 – Block Sign‑In From Non‑US Locations
+## CA02 – Block Sign‑In From Non‑US Locations
 The second policy demonstrates location‑based access control.
 
 Named Location Creation
@@ -72,7 +72,7 @@ Screenshot reference:
 This demonstrates that CA02 correctly blocks sign‑ins originating outside the allowed region.
 
 
-##Break‑Glass Emergency Access Account
+## Break‑Glass Emergency Access Account
 
 A break‑glass account ensures that administrators can still access the tenant even if Conditional Access or MFA becomes overly restrictive. In real environments, these accounts are intentionally difficult to identify — they typically do not use obvious usernames like “breakglass” or “emergencyadmin.” Instead, they follow naming conventions that blend into the directory to avoid becoming easy targets during reconnaissance.
 
@@ -108,7 +108,7 @@ Screenshot references:
 This confirms that the break‑glass account bypasses all Conditional Access policies and remains available for emergency use.
 
 
-##Takeaways
+## Takeaways
 This artifact demonstrates the core responsibilities of an IAM analyst:
 
 - Designing identity controls  
