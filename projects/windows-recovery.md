@@ -1,4 +1,3 @@
-AI-Assisted Case Study: AI was used as a troubleshooting and documentation assistan during this real-world system recovery. I performed the recovery actions on my own computer; this page documents that experience and the lessons derived from it.
 ---
 title: "Credential‑Safe Windows Recovery on Encrypted NVMe Drive"
 date: 2026-01-10
@@ -18,6 +17,8 @@ tags:
 
 # Credential‑Safe Windows Recovery on Encrypted NVMe Drive  
 ### A Case Study in IAM, Cloud Security, and System Integrity
+
+AI-Assisted Case Study: AI was used as a troubleshooting and documentation assistan during this real-world system recovery. I performed the recovery actions on my own computer; this page documents that experience and the lessons derived from it.
 
 ## Overview
 This project documents a full recovery of a Windows 11 system stored on a BitLocker‑encrypted NVMe drive after a cloning‑related bootloader failure. The goal was not just to restore functionality, but to preserve **credential safety**, **identity integrity**, and **cloud‑synced data** while applying structured, forensic‑style troubleshooting.
