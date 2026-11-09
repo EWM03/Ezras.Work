@@ -7,3 +7,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;I configured these conditions to reflect real‑world access patterns. In certain trusted locations, Extend Unlock requires both my fingerprint and the presence of my smartwatch, which functions as a physical key. In other locations, only the fingerprint is required. These combinations of password, location, and paired device presence effectively operate as conditional access policies on a mobile platform.
 
 &nbsp;&nbsp;&nbsp;&nbsp;Together, these controls allow me to access my phone quickly when I need to—such as when looking up information for a customer at work—while still maintaining strong protections against unauthorized access. This artifact illustrates how identity signals, environmental context, and device‑based factors can be combined to create a secure and usable access control strategy.
+
+<ul>
+  <li><a href="https://www.ezras.work">Return to Main Page</a></li>
+</ul>
