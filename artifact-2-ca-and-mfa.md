@@ -1,4 +1,4 @@
-
+AI-Assisted Guided Project: AI provided guidance for planning, configuration, troubleshooting, and documentation. I performed and validated the hands-on Conditional Access and MFA work in my Microsoft Entra environment and used the project to build practical IAM experience.
 
 # Implementing Conditional Access and MFA in Microsoft Entra (Artifact 2)
 
