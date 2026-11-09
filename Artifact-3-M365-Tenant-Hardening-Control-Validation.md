@@ -20,7 +20,7 @@ I configured the Global meeting policy so that only invited users automatically 
 The specified “Only organizers and co-organizers” wording was not available in the administrative interface. I selected “Organizers, but user can override,” the most restrictive presenter option available. I then verified through the supplied assessment that the underlying “OrganizerOnlyUserOverride” value satisfied the checkpoint.
 ### Control 09 “Prevent Anonymous Teams Meeting Join”
 I disabled ‘Anonymous users can join a meeting,’ preventing anonymous participants from joining meetings governed by the Global policy.
-Control 10 “Self-service password reset for all users”
+### Control 10 “Self-service Password Reset for All Users”
 I enabled self-service password reset for All users under Entra ID → Password reset → Properties, allowing users to perform supported password-reset operations without relying entirely on administrator intervention.
 ## Lessons Learned
 I learned that I need much more experience navigating the Microsoft Admin centers. I spent a decent amount of time looking for where to change policies compared to actually changing them. I also need to familiarize myself more with Microsoft’s version of “Who, what, when, where, and how?” when configuring Conditional Access: identities, target resources, conditions, grant controls, and session controls. It was interesting to see that a validator could report a failure even though the visible policy configuration appeared to meet the stated requirements. I learned to verify both my configurations and the validator by examining the underlying evidence.
