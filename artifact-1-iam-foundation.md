@@ -1,3 +1,5 @@
+AI-Assisted Guided Project: AI provided substantial guidance throughout the design, implementation, troubleshooting, documentation, and presentation of this project. I performed the hands-on work and used the project as a guided learning exercise in Microsoft Entra ID and identity governance.
+
 # Identity Governance Foundation (Artifact 1)
 ## &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This lab simulates a small organization transitioning from baseline identity protections to enterprise-grade governance. It demonstrates user provisioning, role-based access control, MFA enforcement, Conditional Access policy creation, and Privileged Identity Management workflows. Logs and screenshots validate each step, showing realistic authentication behavior across multiple personas and geographic locations.
 ## The project reflects hands-on experience with Microsoft Entra ID, including:
